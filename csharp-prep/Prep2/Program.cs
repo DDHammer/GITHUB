@@ -34,7 +34,7 @@ class Program
         Console.WriteLine($"Your grade is: {letter}");
         if (percent2 >= 70)
         {
-        Console.WriteLine("Congratulations! You passed the course.");
+        Console.WriteLine("You did it, good work.");
         }
         else
         {
