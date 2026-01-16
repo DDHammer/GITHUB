@@ -7,24 +7,24 @@ class Program
     static void Main()
     {
         Random randomGenerator = new Random();
-        int magicNumber = randomGenerator.Next(1, 101);
+        int Number = randomGenerator.Next(1, 101);
         int guess = -1;
-        while (guess != magicNumber)
+        while (guess != Number)
         {
             Console.Write("What is your guess? ");
             string input = Console.ReadLine();
             guess = int.Parse(input);
-            if (magicNumber > guess)
+            if (Number > guess)
             {
                 Console.WriteLine("Higher");
             }
-            else if (magicNumber < guess)
+            else if (Number < guess)
             {
                 Console.WriteLine("Lower");
             }
             else
             {
-                Console.WriteLine("You guessed it!");
+                Console.WriteLine("You got it!");
             }
         }
     }
