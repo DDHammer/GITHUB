@@ -7,7 +7,6 @@ public class Entry
     public string _promptText;
     public string _entryText;
     public string _mood;
-
     public void Display()
     {
         Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
@@ -29,7 +28,6 @@ public class PromptGenerator
         "What do you want to do tomorrow?",
         "What is the most fun thing you did today?"
     };
-
     public string GetRandomPrompt()
     {
         Random random = new Random();
@@ -63,7 +61,6 @@ public class Journal
         }
         Console.WriteLine("Journal saved successfully!");
     }
-
     public void LoadFromFile(string file)
     {
         if (!File.Exists(file))
@@ -99,7 +96,7 @@ class Program
         PromptGenerator promptGen = new PromptGenerator();
         string choice = "";
 
-        Console.WriteLine("Welcome to the Daily Reflection Journal!");
+        Console.WriteLine("Welcome to your Journal!");
 
         while (choice != "5")
         {
@@ -111,12 +108,11 @@ class Program
             Console.WriteLine("5. Quit");
             Console.Write("What would you like to do? ");
             choice = Console.ReadLine();
-
             if (choice == "1")
             {
                 string prompt = promptGen.GetRandomPrompt();
                 Console.WriteLine($"\nPROMPT: {prompt}");
-                Console.Write("> ");
+                Console.Write("entry: ");
                 string response = Console.ReadLine();
 
                 Console.Write("How are you feeling today (Happy, Tired, Exicted)? ");
