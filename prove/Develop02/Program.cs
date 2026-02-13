@@ -1,5 +1,4 @@
 using System;
-
 // THE ENTRY CLASS
 public class Entry
 {
@@ -12,7 +11,7 @@ public class Entry
         Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
         Console.WriteLine($"Mood: {_mood}");
         Console.WriteLine($"{_entryText}");
-        Console.WriteLine("----------------------------------------");
+        Console.WriteLine("---------------(next entry)------------------");
     }
 }
 // THE PROMPT GENERATOR CLASS
